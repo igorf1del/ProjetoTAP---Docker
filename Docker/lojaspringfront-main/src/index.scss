@@ -1,0 +1,113 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+.aplicacao {
+  @extend .container;
+  @extend .py-3;
+
+  max-width: 960px;
+}
+
+header {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .flex-md-row;
+  @extend .align-items-center;
+  @extend .pb-3;
+  @extend .mb-4;
+  @extend .border-bottom;
+
+  span {
+    @extend .fs-4;
+  }
+
+  nav {
+    @extend .d-inline-flex;
+    @extend .mt-2;
+    @extend .mt-md-0;
+    @extend .ms-md-auto;
+
+    a {
+      @extend .me-3;
+      @extend .py-2;
+      @extend .text-dark;
+      @extend .text-decoration-none;
+    }
+  }
+}
+
+footer {
+  @extend .pt-4;
+  @extend .my-md-5;
+  @extend .pt-md-5;
+  @extend .border-top;
+
+  small {
+    @extend .d-block;
+    @extend .mb-3;
+    @extend .text-muted;
+  }
+}
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+
+  .box-produto {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    min-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.detalhe-produto {
+  display: flex;
+  gap: 15px;
+
+  .box-dados {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 20px;
+
+    .dados-produto {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+  
+      h3 {
+        text-align: center;
+      }  
+    }  
+  }
+
+  .box-compra {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    button {
+      @extend .btn;
+      @extend .btn-success;
+    }
+  }
+}
+
+.aguarde {
+  @extend .d-flex;
+  @extend .align-items-center;
+  
+  div {
+    @extend .spinner-border;
+    @extend .ms-auto;
+  }
+}
